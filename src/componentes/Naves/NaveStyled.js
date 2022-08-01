@@ -9,7 +9,7 @@ export const NavesStyle = styled.div `
         margin: 0 20% 2% 20%;
         background-color: #1a1919;
         list-style-type: none; 
-        padding: 1px 0 1px 1rem;     
+        padding: 1px 0 1px 1rem; 
     }
     p{
         margin: none;
@@ -22,6 +22,10 @@ export const NavesStyle = styled.div `
         font-size: 16px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: lighter;
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
  
 `;
