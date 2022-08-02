@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const NavesStyle = styled.div `
-
     ul{
         justify-content: center;
     }
@@ -26,6 +25,16 @@ export const NavesStyle = styled.div `
     a{
         text-decoration: none;
         color: white;
+    }
+    button{
+        background-color: black;
+        color: white;
+        border-color: darkgray;
+        padding:1rem;
+        margin-bottom: 1rem;
+        :hover{
+            border: solid blue 0.2rem;
+        }
     }
  
 `;

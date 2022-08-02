@@ -2,18 +2,21 @@ import styled from "styled-components";
 
 
 export const CardContainer = styled.div`
-    display: block;
+    display: grid;
+    grid-template-rows: min-content;
     margin: 0 18% 0 18%;
 `;
 
 export const ShipImage = styled.div`
-    height: 200px;
     margin-top: 1rem;
     text-align: center;
-    border-bottom: solid 0.1rem #ff699b;
+    img{
+        border-bottom: solid 0.1rem #ff699b;
+    }
 `;
 export const DetailsContainer = styled.div`
     background-color: #363636;
+    border-radius: 10px;
     padding:1rem;
 `;
 export const ShipName = styled.div`

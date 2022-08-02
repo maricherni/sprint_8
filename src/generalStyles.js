@@ -7,6 +7,15 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export const Test = styled.div `
-
+export const Button = styled.button `
+    background-color: black;
+    color: white;
+    border-color: darkgray;
+    padding:1rem;
+    margin-bottom: 1rem;
+:hover{
+    border: solid blue 0.2rem;
+    color: blue;
+    font-weight: bold;
+    }
 `;

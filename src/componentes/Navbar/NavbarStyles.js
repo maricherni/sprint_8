@@ -5,17 +5,19 @@ export const Banner = styled.div `
 `;
 
 export const BannerTop = styled.div `
-    background-image: url('');
     display: flex;
+    img{
+        height: 10rem;
+        margin-bottom: none;
+        margin-left: 300px;
+    }
 `;
 
 export const TopLeft = styled.div`
     flex-grow: 4;
     text-align: center;
+
 `;
-
-
-
 
 export const BannerBottom = styled.div `
     border-top: solid grey 0.5px;

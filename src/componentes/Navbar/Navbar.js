@@ -8,7 +8,7 @@ const Navbar = () => {
             <Banner>
                 <BannerTop>
                     <TopLeft>
-                        <img src={''} alt="Logo StarWars" />
+                        <img src={'../images/StarWarsLogo.png'} alt="Logo StarWars" />
                     </TopLeft>
                     <TopRight>
                         <ul>
