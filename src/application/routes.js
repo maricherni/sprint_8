@@ -4,7 +4,9 @@ import LandingPage from '../pages/LandingPage';
 import Navbar from '../componentes/Navbar/Navbar';
 import { GlobalStyle } from '../generalStyles';
 import ShipCardPage from '../pages/ShipCardPage';
-import SignUp from '../pages/SignUp';
+import SignUpPage from '../pages/SignUp';
+import LogInPage from '../pages/Login';
+
 
 const Router = () => (
     
@@ -15,7 +17,8 @@ const Router = () => (
             <Route index element={<LandingPage/>} />
             <Route path="/lista_naves/" element={<ShipPage/>} />
             <Route path='/naves/:id' element={<ShipCardPage/>} /> 
-            <Route path='/SignUp' element={<SignUp/>} />
+            <Route path='/SignUp' element={<SignUpPage/>} />
+            <Route path='/Login' element={<LogInPage/>} />
              { /* Ruta mensaje de error en el caso de que la ruta no exista.*/}    
             <Route path="*" element={<div>404</div> } />
         </Routes>

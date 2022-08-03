@@ -26,15 +26,4 @@ export const NavesStyle = styled.div `
         text-decoration: none;
         color: white;
     }
-    button{
-        background-color: black;
-        color: white;
-        border-color: darkgray;
-        padding:1rem;
-        margin-bottom: 1rem;
-        :hover{
-            border: solid blue 0.2rem;
-        }
-    }
- 
 `;

@@ -12,7 +12,7 @@ const Navbar = () => {
                     </TopLeft>
                     <TopRight>
                         <ul>
-                            <li><Link to= '/'>LOG IN</Link></li>
+                            <li><Link to= '/Login'>LOG IN</Link></li>
                             <li className = 'lastChild'><Link to= '/SignUp'>SIGN UP</Link></li>
                         </ul>
                     </TopRight>

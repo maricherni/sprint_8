@@ -26,17 +26,15 @@ const ShipCard = () => {
         obtenerNave();
     },[id]);
     
-const availableImage = `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
-const notAvailableImage = `../images/StarWarsLogo.png`;    
-
-const image = availableImage? availableImage: notAvailableImage;
+//Imagen de la nave. Se asigna la de la web, pero en caso de que no se encuentre, se actualizará el estado por una por defecto.
+const [shipImage, setShipImage] = useState(`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`)
 
 return (
     <>
     <CardContainer>
     
         <ShipImage>
-            <img src={image} alt={`${ship.name}`} />
+            <img src={shipImage} onError={()=> setShipImage(`../images/not_available.png`)} alt={`${ship.name}`} />
         </ShipImage>
         <DetailsContainer>
             <ShipName><h2>{ship.name}</h2></ShipName>
@@ -59,11 +57,8 @@ return (
             </FeaturesContainer>
         </DetailsContainer>
     </CardContainer>
-    
     </>
-    
 );
-
 }
 
 export default ShipCard; 

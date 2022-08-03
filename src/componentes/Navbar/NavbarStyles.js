@@ -25,7 +25,7 @@ export const BannerBottom = styled.div `
     ul{
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     a{
         text-decoration: none;
