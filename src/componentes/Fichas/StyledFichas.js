@@ -15,7 +15,7 @@ export const ShipImage = styled.div`
     }
 `;
 export const DetailsContainer = styled.div`
-    background-color: #363636;
+    border: solid 0.1px #363636;
     border-radius: 10px;
     padding:1rem;
 `;
@@ -37,5 +37,9 @@ export const FeaturesLeft = styled.div`
 export const FeaturesRight = styled.div`
     
 `;
-
-
+export const PilotsCards = styled.div`
+    
+`;
+export const FilmsCards = styled.div`
+    
+`;

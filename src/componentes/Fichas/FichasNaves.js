@@ -9,8 +9,13 @@ import {
     ShipDescription, 
     FeaturesContainer, 
     FeaturesLeft, 
-    FeaturesRight
-} from '../Fichas/FichasNavesStyled'
+    FeaturesRight,
+    PilotsCards,
+    FilmsCards
+} from './StyledFichas'
+import Pilot from './Pilotos';
+import Films from './Peliculas';
+
 
 const ShipCard = () => {
     const [ship, setShip] = useState({});
@@ -38,11 +43,10 @@ return (
         </ShipImage>
         <DetailsContainer>
             <ShipName><h2>{ship.name}</h2></ShipName>
-            <ShipDescription><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci in, esse a vitae quasi aperiam officia amet quam incidunt, pariatur inventore eum consectetur est animi exercitationem. Itaque accusantium nobis ut.</p></ShipDescription>
+            <ShipDescription><p>{ship.starship_class}</p></ShipDescription>
             <FeaturesContainer>
                 <FeaturesLeft>
                     <p>Model: {ship.model}</p>
-                    <p>Class: {ship.starship_class}</p>
                     <p>Cost: {ship.cost_in_credits} credits</p>
                     <p>Atmospheric Speed: {ship.max_atmosphering_speed}</p>
                     <p>Cargo Capacity: {ship.cargo_capacity}</p>
@@ -55,6 +59,12 @@ return (
                     <p>Consumables: {ship.consumables}</p>
                 </FeaturesRight>
             </FeaturesContainer>
+            <PilotsCards>
+                <Pilot pilotArray={ship.pilots}></Pilot>
+            </PilotsCards>
+            <FilmsCards>
+               {/*  <Films pilotArray={ship.pilots}></Films> */}
+            </FilmsCards>
         </DetailsContainer>
     </CardContainer>
     </>
