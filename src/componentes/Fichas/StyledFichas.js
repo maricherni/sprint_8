@@ -38,7 +38,9 @@ export const FeaturesRight = styled.div`
     
 `;
 export const PilotsCards = styled.div`
-    
+/*     border: solid darkgray 0.1px;
+    margin-bottom: 1rem;
+    border-radius: 10px; */
 `;
 export const FilmsCards = styled.div`
     

@@ -103,6 +103,7 @@ export const SignUp = () => {
                         </li>
                     </ul>
                     <Button className="submit" type="submit">ÚNETE A LA FUERZA</Button>
+                    <h5>Registrarte tú debes, para el contenido ver poder.</h5>
                 </Right>
             </Container>
             </form>
@@ -113,7 +114,7 @@ export const SignUp = () => {
     
     export const LogIn = () => {
         //Datos usuario
-        const [logIn, setLogIn] = useState(JSON.parse(localStorage.getItem('logIn')) || []);
+        const [logIn, setLogIn] = useState([]);
         //Autentificación usuario. Se almacena en sessionStorage para que al acabar la sesión se desconecte
         const[isAutheticated, setIsAutheticated] = useState(JSON.parse(sessionStorage.getItem('logged')) || false);
         const navigate = useNavigate();
@@ -136,7 +137,7 @@ export const SignUp = () => {
             let checkPassword = [];          
             checkUser = userList.filter(user=> user.email === email);
             checkPassword = checkUser.find(user => user.password === password);
-
+            
             if (checkUser && !checkPassword) {
                 alert('Contraseña errónea')
                 setIsAutheticated(false);

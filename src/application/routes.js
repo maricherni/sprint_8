@@ -6,6 +6,7 @@ import { GlobalStyle } from '../generalStyles';
 import ShipCardPage from '../pages/ShipCardPage';
 import SignUpPage from '../pages/SignUp';
 import LogInPage from '../pages/Login';
+import Pilots from '../componentes/Fichas/Pilotos';
 
 
 const Router = () => {
@@ -19,6 +20,8 @@ const Router = () => {
             <Route index element={<LandingPage/>} />
             <Route path='/lista_naves/' element={loggedIn ? (<ShipPage/>) : ( <Navigate replace to="/SignUp" /> )} />
             <Route path='/naves/:id' element={loggedIn ? (<ShipCardPage/>) : ( <Navigate replace to="/SignUp" /> )} /> 
+            <Route path='/pilotsCard' element={loggedIn ? (<Pilots/>) : ( <Navigate replace to="/SignUp" /> )} /> 
+            <Route path='/filmsCard' element={loggedIn ? (<ShipCardPage/>) : ( <Navigate replace to="/SignUp" /> )} /> 
             <Route path='/SignUp' element={<SignUpPage/>} />
             <Route path='/Login' element={<LogInPage/>} />
              { /* Ruta mensaje de error en el caso de que la ruta no exista.*/}    

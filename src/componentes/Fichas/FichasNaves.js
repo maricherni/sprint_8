@@ -17,6 +17,7 @@ import Pilot from './Pilotos';
 import Films from './Peliculas';
 
 
+
 const ShipCard = () => {
     const [ship, setShip] = useState({});
     const {id} = useParams();
@@ -25,11 +26,12 @@ const ShipCard = () => {
         const obtenerNave = async () =>{
             const url = `https://swapi.dev/api/starships/${id}/`;
             const result = await axios.get(url);
-        
+
             setShip(result.data)
         }
         obtenerNave();
-    },[id]);
+    },[id, ship]);
+
     
 //Imagen de la nave. Se asigna la de la web, pero en caso de que no se encuentre, se actualizará el estado por una por defecto.
 const [shipImage, setShipImage] = useState(`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`)
@@ -37,7 +39,6 @@ const [shipImage, setShipImage] = useState(`https://starwars-visualguide.com/ass
 return (
     <>
     <CardContainer>
-    
         <ShipImage>
             <img src={shipImage} onError={()=> setShipImage(`../images/not_available.png`)} alt={`${ship.name}`} />
         </ShipImage>
@@ -56,14 +57,14 @@ return (
                     <p>Length: {ship.length}</p>
                     <p>Crew: {ship.crew}</p>
                     <p>Passengers: {ship.passengers}</p>
-                    <p>Consumables: {ship.consumables}</p>
+                   
                 </FeaturesRight>
             </FeaturesContainer>
             <PilotsCards>
-                <Pilot pilotArray={ship.pilots}></Pilot>
+                <Pilot pilotsArray={ship.pilots}></Pilot>
             </PilotsCards>
             <FilmsCards>
-               {/*  <Films pilotArray={ship.pilots}></Films> */}
+                {<Films shipFilms={ship.films}></Films>}
             </FilmsCards>
         </DetailsContainer>
     </CardContainer>
