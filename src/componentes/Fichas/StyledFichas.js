@@ -16,7 +16,12 @@ export const ShipImage = styled.div`
     text-align: center;
     img{
         border-bottom: solid 0.1rem #ff699b;
-        width: 100%;
+        width: 800px;
+    }
+    @media only screen and (max-width:1000px){
+        img{
+            width: 100%;
+        }
     }
 `;
 export const DetailsContainer = styled.div`
