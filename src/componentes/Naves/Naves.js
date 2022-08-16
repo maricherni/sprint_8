@@ -44,7 +44,8 @@ const Naves = () => {
             </ul>
             <div>
                 <ButtonLayout>
-                    <Button className='button' onClick={()=> setPage(page + 1)}>VIEW MORE</Button>
+                    <Button className='button' onClick={()=> setPage(page > 1? page - 1: page)}>BACKWARD</Button>
+                    <Button className='button' onClick={()=> setPage(page < 4? page + 1: page)}>FORWARD</Button>
                 </ButtonLayout>
            </div>
             </NavesStyle>

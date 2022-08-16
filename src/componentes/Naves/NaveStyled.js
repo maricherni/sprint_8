@@ -35,5 +35,7 @@ export const NavesStyle = styled.div `
 `;
 
 export const ButtonLayout = styled.div`
-    text-align: center;
+    justify-content: center;
+    display:flex; 
+    gap: 1rem;
 `;
