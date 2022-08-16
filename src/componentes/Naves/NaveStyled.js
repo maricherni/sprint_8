@@ -26,4 +26,14 @@ export const NavesStyle = styled.div `
         text-decoration: none;
         color: white;
     }
+    @media only screen and (max-width:470px){
+    margin: 0;
+    font-size: 70%;
+    justify-content: center;
+    margin-right: 2rem;
+    }
+`;
+
+export const ButtonLayout = styled.div`
+    text-align: center;
 `;

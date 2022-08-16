@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import {Banner, BannerTop, TopLeft, TopRight, BannerBottom}  from "./NavbarStyles";
+import {Banner, BannerTop, TopRight, BannerBottom}  from "./NavbarStyles";
 
 
 const Navbar = () => {
     return(
         <div>
             <Banner>
+            <img src={'../images/StarWarsLogo.png'} alt="Logo StarWars" />
                 <BannerTop>
-                    <TopLeft>
-                        <img src={'../images/StarWarsLogo.png'} alt="Logo StarWars" />
-                    </TopLeft>
                     <TopRight>
                         <ul>
                             <li><Link to= '/Login'>LOG IN</Link></li>

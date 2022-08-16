@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { PilotsCards, FeaturesContainer, FeaturesLeft, FeaturesRight } from "./StyledFichas";
+import { Cards} from "./StyledFichas";
 import { Button } from "../../generalStyles";
 
 const Pilots = (props) => {
@@ -32,7 +32,6 @@ const Pilots = (props) => {
         } else{
             setShipPilots([])
         }
-
         console.log('shipPilots', shipPilots)
         console.log('pilots', pilots)
         console.log(active);
@@ -44,25 +43,19 @@ const Pilots = (props) => {
         <Button onClick={handleClick}>{pilotsButton}</Button>
         {pilots.map((pilot, index) => 
             <div key={index}>
-            <PilotsCards>
-                <FeaturesContainer>
-                    <FeaturesLeft>
-                        <p >Name: {pilot.name}</p> 
-                        <p >Gender: {pilot.gender}</p> 
-                        <p >Birth: {pilot.birth_year}</p> 
-                        <p >Height: {pilot.height}cm</p> 
-                        <p >Mass: {pilot.mass}Kg</p> 
-                        <p >Eyes-color: {pilot.eye_color}</p> 
-                    </FeaturesLeft>
-                    <FeaturesRight>
-                        <p >Hair-color: {pilot.hair_color}</p> 
-                        <p >Skin-color: {pilot.skin_color}</p> 
-                        <p >Created: {pilot.created}</p> 
-                        <p >Edited: {pilot.edited}</p> 
-                        <p >URL: {pilot.url}</p> 
-                    </FeaturesRight>
-                </FeaturesContainer>
-            </PilotsCards>
+            <Cards>
+                <p >Name: {pilot.name}</p> 
+                <p >Gender: {pilot.gender}</p> 
+                <p >Birth: {pilot.birth_year}</p> 
+                <p >Height: {pilot.height}cm</p> 
+                <p >Mass: {pilot.mass}Kg</p> 
+                <p >Eyes-color: {pilot.eye_color}</p> 
+                <p >Hair-color: {pilot.hair_color}</p> 
+                <p >Skin-color: {pilot.skin_color}</p> 
+                <p >Created: {pilot.created}</p> 
+                <p >Edited: {pilot.edited}</p> 
+                <p >URL: {pilot.url}</p> 
+            </Cards>
             </div>
             
         )}

@@ -10,10 +10,10 @@ import {
     FeaturesContainer, 
     FeaturesLeft, 
     FeaturesRight,
-    PilotsCards,
-    FilmsCards
+    AdditionalInfo,
+    AddInfoContainer
 } from './StyledFichas'
-import Pilot from './Pilotos';
+import Pilots from './Pilotos';
 import Films from './Peliculas';
 
 
@@ -57,15 +57,16 @@ return (
                     <p>Length: {ship.length}</p>
                     <p>Crew: {ship.crew}</p>
                     <p>Passengers: {ship.passengers}</p>
-                   
                 </FeaturesRight>
             </FeaturesContainer>
-            <PilotsCards>
-                <Pilot pilotsArray={ship.pilots}></Pilot>
-            </PilotsCards>
-            <FilmsCards>
-                {<Films shipFilms={ship.films}></Films>}
-            </FilmsCards>
+            <AdditionalInfo>
+                <AddInfoContainer>
+                <Pilots pilotsArray={ship.pilots}></Pilots>
+                </AddInfoContainer>
+                <AddInfoContainer>
+                <Films shipFilms={ship.films}></Films>
+                </AddInfoContainer>
+            </AdditionalInfo>
         </DetailsContainer>
     </CardContainer>
     </>

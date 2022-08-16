@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 
 export const Banner = styled.div `
-    display: block;
-`;
-
-export const BannerTop = styled.div `
-    display: flex;
+    text-align: center;
     img{
-        height: 10rem;
-        margin-bottom: none;
-        margin-left: 300px;
+        width: 15%;
+        padding: 1rem 0 1rem 0;
     }
 `;
 
-export const TopLeft = styled.div`
-    flex-grow: 4;
-    text-align: center;
-
+export const BannerTop = styled.div `
+    margin-top: -4rem;
+    padding-right: 2rem;
+    display:flex;
+    justify-content: end;
+ @media only screen and (max-width:500px){
+    margin-top: 0;
+    font-size: 70%;
+    justify-content: center;
+    border-top: solid grey 0.5px;
+ }
 `;
 
-export const BannerBottom = styled.div `
-    border-top: solid grey 0.5px;
-    border-bottom: solid grey 0.5px;
+export const TopRight = styled.div`
     ul{
         display: flex;
         justify-content: center;
@@ -31,7 +31,6 @@ export const BannerBottom = styled.div `
         text-decoration: none;
         color:white;
         &:hover{
-            border-bottom: solid blue 0.3rem;
             font-weight: bold;
             padding: 0.9rem;
         }
@@ -39,20 +38,28 @@ export const BannerBottom = styled.div `
     li{
         list-style-type: none;
     }
-`;
-
-export const TopRight = styled(BannerBottom)`
-    font-size: 0.9rem;
-    flex-grow: 1;
-    margin-top: 2rem;
-    border: none;
-    a{        
-        &:hover{ 
-           border-bottom: none;
-        }
-    }
     .lastChild{
         border-left: solid lightgray 0.1px;
         padding-left: 1rem;
     }
 `;
+
+export const BannerBottom = styled(TopRight) `
+    margin: 1rem 0 2rem 0;
+    border-top: solid grey 0.5px;
+    border-bottom: solid grey 0.5px;
+    font-size: 16px;
+    a{
+        &:hover{
+            border-bottom: solid blue 0.3rem;
+        }
+    }
+    @media only screen and (max-width:500px){
+    margin: 0;
+    font-size: 70%;
+    justify-content: center;
+    padding-right: 2rem;
+    }
+`;
+
+

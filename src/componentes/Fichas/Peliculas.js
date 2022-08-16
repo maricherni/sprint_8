@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Button } from "../../generalStyles";
+import {Cards} from "./StyledFichas";
 
 
 const Films = (props) => {
@@ -41,6 +42,7 @@ const Films = (props) => {
         <Button onClick={handleClick}>{filmsButton}</Button>
         {films.map((film, index) => 
             <div key={index}>
+            <Cards>
                 <p>Title: {film.title}</p> 
                 <p>Episode: {film.episode_id}</p> 
                 <p>Opening: {film.opening_crawl}</p> 
@@ -50,6 +52,7 @@ const Films = (props) => {
                 <p>Created: {film.created}</p> 
                 <p>Edited: {film.title}</p> 
                 <p>URL: {film.url}</p>
+            </Cards>
             </div>
         )}
         </>

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect }from "react";
 import axios from 'axios'; 
-import { NavesStyle } from "./NaveStyled";
+import { ButtonLayout, NavesStyle } from "./NaveStyled";
 import { Link } from "react-router-dom";
 import { Button } from "../../generalStyles";
 /* import ShipCard from "../Fichas/FichasNaves"; */
@@ -43,7 +43,9 @@ const Naves = () => {
                 }
             </ul>
             <div>
-             <Button onClick={()=> setPage(page + 1)}>VIEW MORE</Button>
+                <ButtonLayout>
+                    <Button className='button' onClick={()=> setPage(page + 1)}>VIEW MORE</Button>
+                </ButtonLayout>
            </div>
             </NavesStyle>
             

@@ -189,7 +189,7 @@ export const SignUp = () => {
                             </div>
                         </li>
                     </ul>
-                        <Button type="submit" onClick={handleSubmit}>BIENVENIDO/A/E AL LADO OSCURO</Button>
+                        <Button className='button' type="submit" onClick={handleSubmit}>BIENVENIDO/A/E AL LADO OSCURO</Button>
                     </Right>
                 </ContainerLogIn>
                 </form>

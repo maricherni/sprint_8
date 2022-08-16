@@ -8,4 +8,9 @@ export const HomeContainer = styled.div `
         color: gold;
     }
     
+    @media only screen and (max-width:500px){
+        p, *{
+            font-size: 80%;
+        }
+    }
 `;
